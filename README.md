@@ -1,4 +1,4 @@
-# AWS Glue + DBT + Snowflake ETL Pipeline
+# AWS Glue + DBT + Snowflake ELT Pipeline
 
 This project demonstrates a scalable data pipeline using AWS Glue, S3, dbt, and Snowflake. It showcases data extraction from an external API, storage in S3, and transformation and modeling in Snowflake using dbt.
 
@@ -8,7 +8,12 @@ This project demonstrates a scalable data pipeline using AWS Glue, S3, dbt, and 
 - **Storage**: JSON data stored in an S3 bucket
 - **Modeling & Transformation**: dbt loads and models data into Snowflake
 
----
+## Architecture
+![Architecture Diagram](diagrams/architecture.png)
+
+## DBT Lineage
+![Linage Diagram](diagrams/DBTLineage.png)
+
 
 ## 📌 Project Steps
 
