@@ -93,8 +93,7 @@ aws-glue-dbt-snowflake-pipeline/
 │       └── architecture.py    → Python script to generate architecture diagrams
 └── tests/
     └── sample.json            → Sample JSON file used to test the API and Lambda function
-
----
+```
 
 ---
 
