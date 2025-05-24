@@ -53,6 +53,40 @@ This project demonstrates a scalable data pipeline using AWS Glue, S3, dbt, and 
 
 ---
 
+## 📂 Repository Structure
+```
+aws-glue-dbt-snowflake-pipeline/
+│
+├── README.md                  → Project overview and architecture details
+├── .gitignore                 → Specifies intentionally untracked files to ignore
+├── dbt_project.yml            → Configuration file for the dbt project
+├── diagrams/
+│   └── architecture.png       → Visual diagram of the AWS Glue + dbt + Snowflake pipeline
+├── glue/
+│   └── extract_api.py         → AWS Glue job script for extracting data from an external API
+├── macros/
+│   └── [macro_files].sql      → Custom dbt macros for reusable SQL snippets
+├── models/
+│   ├── raw/                   → dbt models for raw data staging
+│   ├── transform/             → dbt models for data transformation
+│   └── mart/                  → dbt models for data marts
+├── seeds/
+│   └── [seed_files].csv       → Seed data files for dbt
+├── snapshots/
+│   └── [snapshot_files].sql   → dbt snapshots for capturing slowly changing dimensions
+├── snowflake/
+│   └── snowpipe_trigger.sql   → SQL script to configure Snowpipe for auto-ingestion
+├── src/
+│   └── DiagramGenerator/
+│       └── architecture.py    → Python script to generate architecture diagrams
+└── tests/
+    └── sample.json            → Sample JSON file used to test the API and Lambda function
+
+```
+
+---
+
+
 ## 📥 Requirements
 ```
 boto3
