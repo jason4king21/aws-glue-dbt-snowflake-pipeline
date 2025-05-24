@@ -11,6 +11,10 @@ This project demonstrates a scalable data pipeline using AWS Glue, S3, dbt, and 
 ## Architecture
 ![Architecture Diagram](diagrams/architecture.png)
 
+## DBT Lineage
+![Linage Diagram](diagrams/DBTLineage.png)
+
+
 ## 📌 Project Steps
 
 ### 1. Create AWS IAM Role for Glue Job
