@@ -8,7 +8,8 @@ This project demonstrates a scalable data pipeline using AWS Glue, S3, dbt, and 
 - **Storage**: JSON data stored in an S3 bucket
 - **Modeling & Transformation**: dbt loads and models data into Snowflake
 
----
+## Architecture
+![Architecture Diagram](diagrams/architecture.png)
 
 ## 📌 Project Steps
 
