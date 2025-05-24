@@ -96,6 +96,8 @@ aws-glue-dbt-snowflake-pipeline/
 
 ---
 
+---
+
 ## ✅ Highlights
 
 - Modular pipeline separating ingestion (AWS) and modeling (dbt)
