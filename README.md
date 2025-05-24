@@ -1,19 +1,39 @@
-# AWS Glue + DBT + Snowflake ELT Pipeline
+# 🧪 AWS Glue + dbt + Snowflake ELT Pipeline
 
-This project demonstrates a scalable data pipeline using AWS Glue, S3, dbt, and Snowflake. It showcases data extraction from an external API, storage in S3, and transformation and modeling in Snowflake using dbt.
+This project demonstrates a batch data pipeline that extracts data from an external API using AWS Glue, lands it into S3, and then uses dbt to model and transform that data within Snowflake.
 
-## 🚀 Overview
+The focus is on modular ELT design, decoupling ingestion from transformation, and enabling reproducible analytics pipelines using version-controlled infrastructure and code.
 
-- **Ingestion**: AWS Glue extracts data from an external API
-- **Storage**: JSON data stored in an S3 bucket
-- **Modeling & Transformation**: dbt loads and models data into Snowflake
+---
 
-## Architecture
+## 🧩 Architecture Overview
 ![Architecture Diagram](diagrams/architecture.png)
 
-## DBT Lineage
+## 🧩 DBT Lineage
 ![Linage Diagram](diagrams/DBTLineage.png)
 
+---
+
+### Components
+
+1. **AWS Glue**: Extracts JSON data from an external API and writes it to S3.
+2. **Amazon S3**: Acts as the data lake/layer for raw storage.
+3. **Snowflake**: Hosts raw and transformed tables for analytics.
+4. **dbt (Data Build Tool)**: Performs transformation logic using staged and mart models.
+5. **macros, snapshots, and seeds**: Support versioned modeling and testing.
+
+---
+
+## 🔧 Tech Stack
+
+- **AWS Glue** – Serverless ETL engine for Python-based ingestion
+- **Amazon S3** – Raw data storage
+- **Snowflake** – Cloud data warehouse for scalable analytics
+- **dbt** – Transformation and modeling layer
+- **Python** – Used in Glue jobs and dbt models
+- **GitHub** – Source control for CI/CD and dbt versioning
+
+---
 
 ## 📌 Project Steps
 
@@ -42,14 +62,6 @@ This project demonstrates a scalable data pipeline using AWS Glue, S3, dbt, and 
 ### 7. Set Up Deployment Environment in dbt
 - Configure production jobs and environments
 - Automate model runs and materializations
-
----
-
-## 🛠 Tools & Tech
-- **AWS Glue**: serverless ETL engine
-- **AWS S3**: cloud object storage
-- **Snowflake**: cloud data warehouse
-- **dbt Cloud**: analytics engineering platform
 
 ---
 
@@ -82,18 +94,30 @@ aws-glue-dbt-snowflake-pipeline/
 └── tests/
     └── sample.json            → Sample JSON file used to test the API and Lambda function
 
-```
+---
+
+## ✅ Highlights
+
+- Modular pipeline separating ingestion (AWS) and modeling (dbt)
+- Reusable macros and dbt configurations for fast onboarding
+- Visualized architecture for communication and clarity
 
 ---
 
+### Prerequisites
 
-## 📥 Requirements
-```
-boto3
-snowflake-connector-python
-dbt-core
-dbt-snowflake
-```
+- Python 3.8+
+- AWS Account with Glue and S3 permissions
+- Snowflake account
+- dbt CLI installed
 
 ---
+
+## 🏷️ Tags & Topics
+```
+Use these hashtags when sharing the project:
+#DataEngineering #AWS #Glue #S3 #Snowflake #dbt #ELT #Python #CloudAnalytics #OpenToWork
+
+```
+
 
