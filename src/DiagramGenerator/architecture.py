@@ -24,7 +24,7 @@ with Diagram("AWS-glue-dbt-snowflake pipeline", show=False, filename="diagrams/a
     s3 = S3("S3 Bucket")
     # s3error = S3("Error Logs")
     snowflake = Snowflake("GLUEDB_PRODUCTION")
-    dbt = Dbt("dbt managed trasformations")
+    dbt = Dbt("dbt managed")
 
     glue >> python >> iam >> s3 >> iam2 >> snowflake >> dbt >> raw >> transform >> mart
     
